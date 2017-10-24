@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="200">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
         <scene sceneID="199">
             <objects>
-                <viewController id="200" sceneMemberID="viewController" customClass="LoginViewController" restorationIdentifier="LoginViewController" storyboardIdentifier="LoginViewController">
+                <viewController storyboardIdentifier="LoginViewController" id="200" customClass="LoginViewController" sceneMemberID="viewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="197"/>
                         <viewControllerLayoutGuide type="bottom" id="198"/>
@@ -15,31 +20,31 @@
                     <view key="view" contentMode="scaleToFill" id="201">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="210" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                <rect key="frame" x="252" y="74" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="210" misplaced="YES">
+                                <rect key="frame" x="140" y="70" width="320" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="211" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                <rect key="frame" x="277" y="153" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="211" misplaced="YES">
+                                <rect key="frame" x="140" y="162" width="320" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint id="1637" firstItem="210" firstAttribute="leading" secondItem="201" secondAttribute="leadingMargin" constant="232"/>
-                            <constraint id="1638" firstItem="210" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="54"/>
-                            <constraint id="1854" firstItem="210" firstAttribute="height" secondItem="201" secondAttribute="height"/>
-                            <constraint id="1855" firstItem="211" firstAttribute="leading" secondItem="201" secondAttribute="leadingMargin" constant="257"/>
-                            <constraint id="1856" firstItem="211" firstAttribute="top" secondItem="210" secondAttribute="bottom" constant="49"/>
+                            <constraint id="443" firstItem="211" firstAttribute="leading" secondItem="201" secondAttribute="leading" constant="164"/>
+                            <constraint id="444" firstItem="211" firstAttribute="top" secondItem="201" secondAttribute="top" constant="160"/>
+                            <constraint id="449" firstItem="210" firstAttribute="leading" secondItem="201" secondAttribute="leadingMargin" constant="120"/>
+                            <constraint id="450" firstItem="210" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="50"/>
+                            <constraint id="451" firstItem="201" firstAttribute="trailingMargin" secondItem="210" secondAttribute="trailing" constant="120"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="UsernameTextField" destination="210" id="name-outlet-210"/>
                         <outlet property="LoginButton" destination="211" id="name-outlet-211"/>
+                        <outlet property="UsernameTextField" destination="210" id="name-outlet-210"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="202" userLabel="First Responder" sceneMemberID="firstResponder"/>
