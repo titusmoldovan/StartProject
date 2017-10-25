@@ -20,6 +20,10 @@ namespace StartProject.iOS
             var set = this.CreateBindingSet<LoginViewController, LoginViewModel>();
 
             set.Bind(UsernameTextField)
+               .For("Text")
+               .To(vm => vm.Username);
+
+            set.Bind(UsernameTextField)
                .For("Placeholder")
                .To(vm => vm.UsernamePlaceholder);
           

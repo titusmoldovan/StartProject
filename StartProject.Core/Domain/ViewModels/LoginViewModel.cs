@@ -1,16 +1,15 @@
-﻿using System;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 
 namespace StartProject.Core.Domain.ViewModels
 {
-    public class LoginViewModel : BaseViewModel
+    public class LoginViewModel : MvxViewModel
     {
         string _username;
-		public string Username
-		{
-			get => _username;
-			set => SetProperty(ref _username, value);
-		}
+        public string Username
+        {
+            get => _username;
+            set => SetProperty(ref _username, value);
+        }
 
         public string UsernamePlaceholder
         {
@@ -31,7 +30,7 @@ namespace StartProject.Core.Domain.ViewModels
 
         void OnLoginClicked()
         {
-           
+            ShowViewModel<HomeViewModel>(new { Username });
         }
     }
 }

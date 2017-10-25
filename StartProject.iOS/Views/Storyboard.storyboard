@@ -51,5 +51,55 @@
             </objects>
             <point key="canvasLocation" x="442" y="142"/>
         </scene>
+        <scene sceneID="673">
+            <objects>
+                <viewController id="674" sceneMemberID="viewController" customClass="HomeViewController" storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="671"/>
+                        <viewControllerLayoutGuide type="bottom" id="672"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="675">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="684" translatesAutoresizingMaskIntoConstraints="NO" text="Label">
+                                <rect key="frame" x="120" y="96" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="1574" firstItem="684" firstAttribute="leading" secondItem="675" secondAttribute="leadingMargin" constant="100"/>
+                            <constraint id="1575" firstItem="684" firstAttribute="top" secondItem="671" secondAttribute="bottom" constant="76"/>
+                            <constraint id="1576" firstItem="675" firstAttribute="trailingMargin" secondItem="684" secondAttribute="trailing" constant="84"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1574"/>
+                                <exclude reference="1575"/>
+                                <exclude reference="1576"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="1574"/>
+                                <include reference="1575"/>
+                                <include reference="1576"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="GreetingMessageLabel" destination="684" id="name-outlet-684"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="676" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="132"/>
+        </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina55"/>
+    </simulatedMetricsContainer>
 </document>
